@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- === PRIMARY SEO === -->
+  <title>Kabin Khadka — Cybersecurity Professional &amp; Ethical Hacker | Nepal</title>
+  <meta name="description" content="Kabin Khadka is a cybersecurity professional and ethical hacker from Kathmandu, Nepal, specialising in penetration testing, web exploitation, CTF competitions, and vulnerability research." />
+  <meta name="keywords" content="Kabin Khadka, cybersecurity Nepal, ethical hacker, penetration tester, CTF player, web exploitation, OSINT, bug bounty, Kathmandu" />
+  <meta name="author" content="Kabin Khadka" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0d131c" />
+  <link rel="canonical" href="https://kabinkhadka.com.np/" />
+
+  <!-- === OPEN GRAPH (Facebook, LinkedIn) === -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Kabin Khadka — Cybersecurity Professional &amp; Ethical Hacker" />
+  <meta property="og:description" content="Penetration testing, CTF competitions, web exploitation, and vulnerability research. Based in Kathmandu, Nepal." />
+  <meta property="og:url" content="https://kabinkhadka.com.np/" />
+  <meta property="og:site_name" content="Kabin Khadka Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <!-- Add a real 1200x630 preview image later, then uncomment:
+  <meta property="og:image" content="https://kabinkhadka.com.np/preview.png" /> -->
+
+  <!-- === TWITTER CARD === -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kabin Khadka — Cybersecurity Professional &amp; Ethical Hacker" />
+  <meta name="twitter:description" content="Penetration testing, CTF competitions, web exploitation, and vulnerability research. Based in Kathmandu, Nepal." />
+
+  <!-- === FAVICON (inline SVG, no extra file needed) === -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d131c'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='%2322c55e'%3EKK%3C/text%3E%3C/svg%3E" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- === STRUCTURED DATA (Person + ProfilePage) === -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Kabin Khadka",
+      "jobTitle": "Cybersecurity Professional & Ethical Hacker",
+      "description": "Penetration tester and CTF competitor specialising in web exploitation, vulnerability research, and digital forensics.",
+      "url": "https://kabinkhadka.com.np/",
+      "email": "mailto:kabinkhadka12345@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kathmandu",
+        "addressCountry": "Nepal"
+      },
+      "knowsAbout": [
+        "Penetration Testing",
+        "Web Exploitation",
+        "Network Security",
+        "Reverse Engineering",
+        "Digital Forensics",
+        "OSINT"
+      ],
+      "sameAs": [
+        "https://github.com/kabinkhadka923",
+        "https://www.linkedin.com/in/kabinkhadka/",
+        "https://www.credly.com/users/kabin-khadka"
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip link for keyboard & screen-reader users -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+
+  <!-- NAV -->
+  <header>
+  <nav id="navbar" aria-label="Primary">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">KK<span class="dot" aria-hidden="true">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-menu">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+  </header>
+
+  <main id="main">
+
+  <!-- HERO WRAPPER (matrix scoped here) -->
+  <div id="hero-wrapper">
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <!-- HERO -->
+  <section id="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="grid-overlay"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Available for opportunities
+      </p>
+      <h1 class="hero-title" id="hero-title">
+        Hi, I'm <span class="gradient-text">Kabin Khadka</span>
+      </h1>
+      <p class="hero-subtitle typewriter" id="typewriter" aria-hidden="true"></p>
+      <p class="sr-only">Penetration Tester, CTF Player, Security Researcher, Ethical Hacker, and Bug Hunter.</p>
+      <p class="hero-desc">
+        Cybersecurity professional passionate about ethical hacking, vulnerability research, and building secure systems. I break things to make them stronger.
+      </p><br><br>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div><br><br>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">Active</span>
+          <span class="stat-label">CTF Player</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">20+</span>
+          <span class="stat-label">Machines Pwned</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">Nepal</span>
+          <span class="stat-label">CTF Competitor</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="terminal-card" aria-hidden="true">
+        <div class="terminal-header">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">~/kabin</span>
+        </div>
+        <div class="terminal-body" id="terminalBody"></div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+      <span class="scroll-mouse" aria-hidden="true">
+        <span class="scroll-wheel"></span>
+      </span>
+      <span>Scroll down</span>
+    </a>
+  </section>
+  </div><!-- /hero-wrapper -->
+
+  <!-- ABOUT -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About</span>
+        <h2 class="section-title" id="about-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <div class="about-img-placeholder">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kabin Khadka monogram avatar">
+              <circle cx="100" cy="80" r="40" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="2"/>
+              <circle cx="100" cy="80" r="25" fill="#22c55e" opacity="0.3"/>
+              <path d="M40 170 Q100 120 160 170" stroke="#22c55e" stroke-width="2" fill="none" opacity="0.5"/>
+              <text x="100" y="88" text-anchor="middle" font-family="JetBrains Mono" font-size="22" fill="#22c55e">KK</text>
+            </svg>
+          </div>
+          <p class="about-img-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            HTB Pro Hacker
+          </p>
+        </div>
+        <div class="about-text">
+          <p class="about-lead">I'm a <strong>Cybersecurity Enthusiast</strong> with expertise in penetration testing, CTF competitions, and vulnerability assessment.</p>
+          <p>My journey started with curiosity — wanting to understand how systems work and, more importantly, how they break. That curiosity evolved into a career where I help organizations identify weaknesses before malicious actors do.</p>
+          <p>When I'm not hunting vulnerabilities, I actively participate in CTF competitions — locally in Nepal at events like <strong>HackAastra</strong>, <strong>BAIC CTF</strong>, <strong>CAN-HACK</strong>, and <strong>NepCTF</strong>, as well as globally on Hack The Box and TryHackMe — sharpening my skills across web exploitation, binary exploitation, cryptography, and OSINT.</p>
+          <div class="about-highlights">
+            <p class="highlight-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5M6 12v5c3 3 9 3 12 0v-5" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              BCS — Cybersecurity &amp; Networking (Ongoing)
+            </p>
+            <p class="highlight-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke="#22c55e" stroke-width="2"/><path d="M16 3H8a2 2 0 00-2 2v2h12V5a2 2 0 00-2-2z" stroke="#22c55e" stroke-width="2"/></svg>
+              <span>Ethical Hacking (Texas College of IT) &middot; <a href="https://www.credly.com/users/kabin-khadka" target="_blank" rel="noopener" class="inline-link">+4 certs on Credly</a></span>
+            </p>
+            <p class="highlight-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="#22c55e" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#22c55e" stroke-width="2"/></svg>
+              Based in — Kathmandu, Nepal
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-primary">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" aria-labelledby="skills-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Skills</span>
+        <h2 class="section-title" id="skills-title">My Arsenal</h2>
+      </div>
+      <div class="skills-grid">
+
+        <article class="skill-card" data-delay="0">
+          <div class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Penetration Testing</h3>
+          <p>Web app, network, and Active Directory pentesting using industry-standard methodologies.</p>
+          <div class="skill-bar" role="meter" aria-label="Penetration Testing proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill" data-width="90"></div></div>
+          <button class="game-btn" data-game="pentest"><span aria-hidden="true">&#9654;</span> Try a Challenge</button>
+        </article>
+
+        <article class="skill-card" data-delay="100">
+          <div class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Web Exploitation</h3>
+          <p>XSS, SQLi, SSRF, IDOR, RCE — finding and exploiting OWASP Top 10 and beyond.</p>
+          <div class="skill-bar" role="meter" aria-label="Web Exploitation proficiency" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill" data-width="85"></div></div>
+          <button class="game-btn" data-game="webex"><span aria-hidden="true">&#9654;</span> Try a Challenge</button>
+        </article>
+
+        <article class="skill-card" data-delay="200">
+          <div class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 17l6-6-6-6M12 19h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Scripting &amp; Automation</h3>
+          <p>Python, Bash, and PowerShell scripting for exploit automation, recon, and tooling.</p>
+          <div class="skill-bar" role="meter" aria-label="Scripting and Automation proficiency" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill" data-width="80"></div></div>
+          <button class="game-btn" data-game="scripting"><span aria-hidden="true">&#9654;</span> Try a Challenge</button>
+        </article>
+
+        <article class="skill-card" data-delay="300">
+          <div class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3" stroke="currentColor" stroke-width="2"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" stroke="currentColor" stroke-width="2"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>OSINT &amp; Recon</h3>
+          <p>Passive and active reconnaissance, digital footprinting, and intelligence gathering.</p>
+          <div class="skill-bar" role="meter" aria-label="OSINT and Recon proficiency" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill" data-width="75"></div></div>
+          <button class="game-btn" data-game="osint"><span aria-hidden="true">&#9654;</span> Try a Challenge</button>
+        </article>
+
+        <article class="skill-card" data-delay="400">
+          <div class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Reverse Engineering</h3>
+          <p>Binary analysis, malware analysis, and CTF binary challenges using Ghidra and GDB.</p>
+          <div class="skill-bar" role="meter" aria-label="Reverse Engineering proficiency" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill" data-width="70"></div></div>
+          <button class="game-btn" data-game="reveng"><span aria-hidden="true">&#9654;</span> Try a Challenge</button>
+        </article>
+
+        <article class="skill-card" data-delay="500">
+          <div class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Network Security</h3>
+          <p>Wireshark, Nmap, firewall analysis, IDS/IPS evasion, and traffic analysis.</p>
+          <div class="skill-bar" role="meter" aria-label="Network Security proficiency" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill" data-width="78"></div></div>
+          <button class="game-btn" data-game="netsec"><span aria-hidden="true">&#9654;</span> Try a Challenge</button>
+        </article>
+
+        <article class="skill-card" data-delay="600">
+          <div class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Digital Forensics</h3>
+          <p>Memory forensics, disk imaging, log analysis, registry forensics, and malware triage using Autopsy, Volatility, and Binwalk.</p>
+          <div class="skill-bar" role="meter" aria-label="Digital Forensics proficiency" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill" data-width="72"></div></div>
+          <button class="game-btn" data-game="forensics"><span aria-hidden="true">&#9654;</span> Try a Challenge</button>
+        </article>
+
+      </div>
+
+      <div class="tools-section">
+        <h3 class="tools-title">Tools I Use</h3>
+        <ul class="tools-grid">
+          <li class="tool-tag">Burp Suite</li>
+          <li class="tool-tag">Metasploit</li>
+          <li class="tool-tag">Nmap</li>
+          <li class="tool-tag">Wireshark</li>
+          <li class="tool-tag">Ghidra</li>
+          <li class="tool-tag">SQLmap</li>
+          <li class="tool-tag">Gobuster</li>
+          <li class="tool-tag">Hydra</li>
+          <li class="tool-tag">Hashcat</li>
+          <li class="tool-tag">John the Ripper</li>
+          <li class="tool-tag">Nikto</li>
+          <li class="tool-tag">Responder</li>
+          <li class="tool-tag">BloodHound</li>
+          <li class="tool-tag">Impacket</li>
+          <li class="tool-tag">ffuf</li>
+          <li class="tool-tag">CyberChef</li>
+          <li class="tool-tag">Autopsy</li>
+          <li class="tool-tag">Volatility</li>
+          <li class="tool-tag">Binwalk</li>
+          <li class="tool-tag">FTK Imager</li>
+          <li class="tool-tag">Strings</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" aria-labelledby="projects-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Projects</span>
+        <h2 class="section-title" id="projects-title">Featured Work</h2>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project-card featured">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="icon-link" aria-label="AutoRecon Framework on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+              <a href="#" class="icon-link" aria-label="AutoRecon Framework live demo">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+          <span class="project-badge">Featured</span>
+          <h3 class="project-title">AutoRecon Framework</h3>
+          <p class="project-desc">A Python-based automated reconnaissance tool that performs passive and active information gathering, port scanning, and service enumeration in a single command.</p>
+          <ul class="project-tags">
+            <li>Python</li><li>Nmap</li><li>Recon</li><li>OSINT</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="icon-link" aria-label="CTF Write-ups Collection on GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-title">CTF Write-ups Collection</h3>
+          <p class="project-desc">Detailed write-ups for 50+ CTF challenges across HackTheBox, TryHackMe, and PicoCTF — covering web, crypto, forensics, and pwn categories.</p>
+          <ul class="project-tags">
+            <li>CTF</li><li>HTB</li><li>Write-ups</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 17l6-6-6-6M12 19h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="icon-link" aria-label="Phishing Simulation Toolkit on GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-title">Phishing Simulation Toolkit</h3>
+          <p class="project-desc">A controlled phishing awareness toolkit for authorized red team exercises, generating campaign reports and employee awareness metrics.</p>
+          <ul class="project-tags">
+            <li>Python</li><li>Red Team</li><li>Social Eng.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="icon-link" aria-label="Vulnerability Scanner on GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-title">Vulnerability Scanner</h3>
+          <p class="project-desc">Custom vulnerability scanner for web applications that automates testing for common misconfigurations, exposed admin panels, and default credentials.</p>
+          <ul class="project-tags">
+            <li>Python</li><li>Web Sec</li><li>Automation</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title" id="contact-title">Get In Touch</h2>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <p class="contact-lead">Have a project, need a security assessment, or just want to talk hacking? I'm always open to interesting conversations.</p>
+          <div class="contact-links">
+            <a href="mailto:kabinkhadka12345@gmail.com" class="contact-link">
+              <span class="contact-link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>
+              </span>
+              <span>
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-value">kabinkhadka12345@gmail.com</span>
+              </span>
+            </a>
+            <a href="https://github.com/kabinkhadka923" class="contact-link" target="_blank" rel="noopener">
+              <span class="contact-link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </span>
+              <span>
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">github.com/kabinkhadka923</span>
+              </span>
+            </a>
+            <a href="https://www.credly.com/users/kabin-khadka" class="contact-link" target="_blank" rel="noopener">
+              <span class="contact-link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <span class="contact-link-label">Credly</span>
+                <span class="contact-link-value">credly.com/users/kabin-khadka</span>
+              </span>
+            </a>
+            <a href="https://www.linkedin.com/in/kabinkhadka/" class="contact-link" target="_blank" rel="noopener">
+              <span class="contact-link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke="currentColor" stroke-width="2"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/></svg>
+              </span>
+              <span>
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-value">linkedin.com/in/kabinkhadka</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Security Assessment Inquiry" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or question..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span class="btn-text">Send Message</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="form-success" id="formSuccess" role="status" aria-live="polite">
+            Message sent successfully! I'll get back to you soon.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; 2026 Kabin Khadka. Built with passion &amp; caffeine.</p>
+      <p class="footer-note">
+        <span class="mono" aria-hidden="true">&lt;/&gt;</span> Open to opportunities
+      </p>
+    </div>
+  </footer>
+
+  <!-- MINI-GAME MODAL -->
+  <div id="game-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="gm-title-el">
+    <div class="gm-backdrop"></div>
+    <div class="gm-panel">
+      <div class="gm-header">
+        <div class="gm-header-left">
+          <span class="gm-icon" aria-hidden="true"></span>
+          <h3 class="gm-title" id="gm-title-el"></h3>
+        </div>
+        <button class="gm-close" aria-label="Close challenge">&#10005;</button>
+      </div>
+      <div class="gm-progress-wrap">
+        <div class="gm-bar-track" aria-hidden="true"><div class="gm-bar"></div></div>
+        <span class="gm-count"></span>
+      </div>
+      <div class="gm-body">
+        <pre class="gm-scenario"></pre>
+        <p class="gm-question"></p>
+        <div class="gm-choices"></div>
+        <div class="gm-feedback" role="status" aria-live="polite"></div>
+      </div>
+      <div class="gm-result">
+        <div class="gm-trophy" aria-hidden="true"></div>
+        <p class="gm-score-text"></p>
+        <p class="gm-score-sub"></p>
+        <button class="gm-retry">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -90,11 +90,11 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 
 /* === TYPEWRITER === */
 const phrases = [
-  'Penetration Tester',
+  'Cybersecurity Student',
   'CTF Player',
-  'Security Researcher',
-  'Ethical Hacker',
-  'Bug Hunter',
+  'Aspiring Pentester',
+  'Bug Bounty Learner',
+  'SOC & Blue Team Enthusiast',
 ];
 let phraseIndex = 0, charIndex = 0, deleting = false;
 const tw = document.getElementById('typewriter');
@@ -128,20 +128,20 @@ if (tw) {
 const termLines = [
   { type: 'cmd', text: 'whoami' },
   { type: 'out', text: 'kabinkhadka' },
-  { type: 'cmd', text: 'cat skills.txt' },
-  { type: 'hi',  text: '[+] Web Exploitation' },
-  { type: 'hi',  text: '[+] Network Security' },
-  { type: 'hi',  text: '[+] Reverse Engineering' },
+  { type: 'cmd', text: 'cat learning.txt' },
+  { type: 'hi',  text: '[+] Web Application Security' },
+  { type: 'hi',  text: '[+] Network Security (CCNA-level)' },
+  { type: 'hi',  text: '[+] Digital Forensics & SOC basics' },
   { type: 'cmd', text: 'cat education.txt' },
   { type: 'hi',  text: '[+] BCS Cybersecurity & Networking (Ongoing)' },
   { type: 'cmd', text: 'cat certifications.txt' },
-  { type: 'hi',  text: '[+] Ethical Hacking - Texas College of IT' },
+  { type: 'hi',  text: '[+] EC-Council Cybersecurity Fundamentals' },
   { type: 'hi',  text: '[+] EC-Council Android Bug Bounty' },
   { type: 'hi',  text: '[+] AWS Cloud Foundations | THM AoC 2025' },
-  { type: 'cmd', text: 'nmap -sV target.htb' },
+  { type: 'cmd', text: 'nmap -sV practice-lab.local' },
   { type: 'out', text: '22/tcp  open  ssh     OpenSSH' },
   { type: 'out', text: '80/tcp  open  http    Apache' },
-  { type: 'hi',  text: '[+] Active CTF: HackAastra | BAIC | HTB' },
+  { type: 'hi',  text: '[+] Practising on TryHackMe | HTB | PortSwigger' },
 ];
 const termBody = document.getElementById('terminalBody');
 let lineIdx = 0;
@@ -483,3 +483,23 @@ document.querySelector('.gm-retry').addEventListener('click', () => {
 });
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeGame(); });
+
+/* === CASE STUDY FILTER (interactive technical section) === */
+(function () {
+  const filters = document.querySelectorAll('.case-filter');
+  const cards = document.querySelectorAll('.case-card');
+  if (!filters.length || !cards.length) return;
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const f = btn.dataset.filter;
+      filters.forEach(b => {
+        const on = b === btn;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      cards.forEach(c => {
+        c.classList.toggle('is-hidden', !(f === 'all' || c.dataset.cat === f));
+      });
+    });
+  });
+})();

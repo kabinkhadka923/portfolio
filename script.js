@@ -128,21 +128,24 @@ if (tw) {
 const termLines = [
   { type: 'cmd', text: 'whoami' },
   { type: 'out', text: 'kabinkhadka' },
-  { type: 'cmd', text: 'cat learning.txt' },
-  { type: 'hi',  text: '[+] Web Application Security' },
-  { type: 'hi',  text: '[+] Network Security (CCNA-level)' },
-  { type: 'hi',  text: '[+] Digital Forensics & SOC basics' },
+  { type: 'cmd', text: 'cat focus_areas.txt' },
+  { type: 'hi',  text: '[+] SIEM & Log Analysis (Splunk/ELK fundamentals)' },
+  { type: 'hi',  text: '[+] Network Traffic Analysis (Wireshark & Nmap)' },
+  { type: 'hi',  text: '[+] Web Application Defense (OWASP Top 10 mitigation)' },
+  { type: 'hi',  text: '[+] Incident Response & Digital Forensics Triage' },
   { type: 'cmd', text: 'cat education.txt' },
   { type: 'hi',  text: '[+] BCS Cybersecurity & Networking (Ongoing)' },
   { type: 'cmd', text: 'cat certifications.txt' },
   { type: 'hi',  text: '[+] EC-Council Cybersecurity Fundamentals' },
   { type: 'hi',  text: '[+] EC-Council Android Bug Bounty' },
   { type: 'hi',  text: '[+] AWS Cloud Foundations | THM AoC 2025' },
-  { type: 'cmd', text: 'nmap -sV practice-lab.local' },
-  { type: 'out', text: '22/tcp  open  ssh     OpenSSH' },
-  { type: 'out', text: '80/tcp  open  http    Apache' },
-  { type: 'hi',  text: '[+] Practising on TryHackMe | HTB | PortSwigger' },
+  { type: 'cmd', text: 'nmap -sV security-testing-lab.local' },
+  { type: 'out', text: '22/tcp open ssh OpenSSH (Secure Shell Access)' },
+  { type: 'out', text: '80/tcp open http Apache httpd (Web Target)' },
+  { type: 'cmd', text: 'cat platforms.txt' },
+  { type: 'hi',  text: '[+] Active Labs: TryHackMe | HackTheBox | PortSwigger' }
 ];
+
 const termBody = document.getElementById('terminalBody');
 let lineIdx = 0;
 function appendTermLine(line) {

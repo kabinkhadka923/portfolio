@@ -40,8 +40,8 @@ My personal portfolio website. I'm a **cybersecurity student and enthusiast** fr
 No build step needed — it's a static site.
 
 ```bash
-git clone https://github.com/kabinkhadka923/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/kabinkhadka923/portfolio.git
+cd portfolio
 # then just open index.html in your browser
 ```
 

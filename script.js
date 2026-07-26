@@ -1,13 +1,12 @@
-/* === MOTION PREFERENCE (WCAG 2.3.3) === */
+/* Motion preference */
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* === MATRIX RAIN (hero-scoped) === */
+/* Hero background effect */
 (function () {
   const canvas  = document.getElementById('matrix-canvas');
   const wrapper = document.getElementById('hero-wrapper');
   if (!canvas || !wrapper) return;
-  /* Skip the rain for reduced-motion users and on small/low-power screens
-     (saves battery + CPU on phones — a real mobile-first concern). */
+  /* Disable the effect for reduced motion and small screens. */
   if (prefersReducedMotion || window.innerWidth < 640) { canvas.style.display = 'none'; return; }
   const ctx     = canvas.getContext('2d');
   const chars   = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*<>{}[]|/\\+=~アイウエオカキクケコサシスセソ'.split('');
@@ -68,13 +67,13 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   setInterval(draw, 80);
 })();
 
-/* === NAVBAR SCROLL === */
+/* Navigation on scroll */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 20);
 });
 
-/* === HAMBURGER === */
+/* Mobile navigation toggle */
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 hamburger.addEventListener('click', () => {
@@ -88,7 +87,7 @@ document.querySelectorAll('.nav-links a').forEach(a => {
   });
 });
 
-/* === TYPEWRITER === */
+/* Typewriter text */
 const phrases = [
   'Cybersecurity Student',
   'CTF Player',
@@ -118,13 +117,13 @@ function type() {
 }
 if (tw) {
   if (prefersReducedMotion) {
-    tw.textContent = '> ' + phrases.join(' · ');   /* static, no animation */
+    tw.textContent = '> ' + phrases.join(' · ');   /* Show all text without animation. */
   } else {
     type();
   }
 }
 
-/* === TERMINAL ANIMATION === */
+/* Terminal animation */
 const termLines = [
   { type: 'cmd', text: 'whoami' },
   { type: 'out', text: 'kabinkhadka' },
@@ -168,13 +167,13 @@ function runTerminal() {
 }
 if (termBody) {
   if (prefersReducedMotion) {
-    termLines.forEach(appendTermLine);   /* render all at once, no typing delay */
+    termLines.forEach(appendTermLine);   /* Show all lines without a delay. */
   } else {
     setTimeout(runTerminal, 800);
   }
 }
 
-/* === INTERSECTION OBSERVER — skills & cards === */
+/* Reveal skill cards when they enter the view */
 const io = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
@@ -193,7 +192,7 @@ const io = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.skill-card').forEach(c => io.observe(c));
 
-/* === ACTIVE NAV LINK ON SCROLL (semantic aria-current) === */
+/* Highlight the active navigation link */
 const sections = document.querySelectorAll('section[id]');
 const navItems = document.querySelectorAll('.nav-links a');
 const scrollSpy = new IntersectionObserver((entries) => {
@@ -207,25 +206,63 @@ const scrollSpy = new IntersectionObserver((entries) => {
 }, { rootMargin: '-40% 0px -55% 0px' });
 sections.forEach(s => scrollSpy.observe(s));
 
-/* === CONTACT FORM === */
+/* Contact form */
 const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
 const formSuccess = document.getElementById('formSuccess');
-form.addEventListener('submit', (e) => {
+
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
+  
+  // Hide any previous success message
+  formSuccess.classList.remove('show');
+  
   const btnText = submitBtn.querySelector('.btn-text');
+  const originalText = btnText.textContent;
+  
+  // Show loading state
   btnText.textContent = 'Sending...';
   submitBtn.disabled = true;
-  setTimeout(() => {
-    btnText.textContent = 'Send Message';
+
+  
+  // Collect form data
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch('https://formspree.io/f/maqrawpe', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      // Success! Show your beautiful success message
+      formSuccess.classList.add('show');
+      form.reset();
+      // Auto-hide after 5 seconds
+      setTimeout(() => formSuccess.classList.remove('show'), 5000);
+    } else {
+      // Server-side validation error from Formspree
+      const data = await response.json();
+      if (data.errors) {
+        alert(data.errors.map(error => error.message).join(', '));
+      } else {
+        alert('Oops! Something went wrong. Please try again.');
+      }
+    }
+  } catch (error) {
+    // Network error (user lost internet, etc.)
+    alert('Network error. Please check your connection and try again.');
+  } finally {
+    // Restore button state
+    btnText.textContent = originalText;
     submitBtn.disabled = false;
-    formSuccess.classList.add('show');
-    form.reset();
-    setTimeout(() => formSuccess.classList.remove('show'), 5000);
-  }, 1400);
+  }
 });
 
-/* === SMOOTH SCROLL for older browsers === */
+/* Smooth scrolling */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
     const target = document.querySelector(anchor.getAttribute('href'));
@@ -236,7 +273,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-/* === MINI-GAMES === */
+/* Interactive challenges */
 const GAMES = {
   pentest: {
     title: 'Pentest Challenge', icon: '🛡️',
@@ -333,11 +370,10 @@ const GAMES = {
   }
 };
 
-/* --- Modal state --- */
+/* Challenge state */
 let _game = null, _qIdx = 0, _score = 0, _lock = false, _lastFocus = null, _order = [];
 
-/* Fisher-Yates: returns a randomized permutation of [0..n-1].
-   Used so the correct answer isn't always in the same position. */
+/* Shuffle answer choices so the correct answer changes position. */
 function _shuffle(n) {
   const a = Array.from({ length: n }, (_, i) => i);
   for (let i = a.length - 1; i > 0; i--) {
@@ -347,7 +383,7 @@ function _shuffle(n) {
   return a;
 }
 
-/* Keep keyboard focus inside the open dialog (WCAG 2.4.3 / 2.1.2) */
+/* Keep keyboard focus inside the open challenge. */
 function _trapFocus(e) {
   if (e.key !== 'Tab') return;
   const m = document.getElementById('game-modal');
@@ -363,7 +399,7 @@ function _trapFocus(e) {
 
 function openGame(id) {
   _game = GAMES[id]; _qIdx = 0; _score = 0; _lock = false;
-  _lastFocus = document.activeElement;              /* remember opener */
+  _lastFocus = document.activeElement;              /* Remember what opened the challenge. */
   const m = document.getElementById('game-modal');
   document.querySelector('.gm-title').textContent = _game.title;
   document.querySelector('.gm-icon').textContent  = _game.icon;
@@ -372,7 +408,7 @@ function openGame(id) {
   document.body.style.overflow = 'hidden';
   document.addEventListener('keydown', _trapFocus);
   _renderQ();
-  /* move focus into the dialog */
+  /* Move focus into the challenge. */
   setTimeout(() => document.querySelector('.gm-close').focus(), 0);
 }
 
@@ -388,7 +424,7 @@ function _renderQ() {
   fb.className = 'gm-feedback'; fb.textContent = '';
   const box = document.querySelector('.gm-choices');
   box.innerHTML = '';
-  _order = _shuffle(q.opts.length);   /* randomized display order for this render */
+  _order = _shuffle(q.opts.length);   /* Shuffle choices for this question. */
   if (q.type === 'whodunit') {
     box.className = 'gm-choices gm-suspects';
     _order.forEach((origIdx) => {
@@ -424,8 +460,8 @@ function _answer(idx) {
   const q = _game.qs[_qIdx];
   const ok = idx === q.ans;
   if (ok) _score++;
-  const correctPos = _order.indexOf(q.ans);   /* where the correct answer landed on screen */
-  const clickedPos = _order.indexOf(idx);      /* where the user's pick landed on screen */
+  const correctPos = _order.indexOf(q.ans);   /* Position of the correct answer. */
+  const clickedPos = _order.indexOf(idx);      /* Position of the selected answer. */
   document.querySelectorAll('.gm-choice, .gm-suspect').forEach((el, pos) => {
     if (pos === correctPos) el.classList.add('correct');
     else if (pos === clickedPos && !ok) el.classList.add('wrong');
@@ -465,19 +501,19 @@ function closeGame() {
   document.body.style.overflow = '';
   document.removeEventListener('keydown', _trapFocus);
   _game = null;
-  if (_lastFocus && typeof _lastFocus.focus === 'function') _lastFocus.focus();  /* return focus to opener */
+  if (_lastFocus && typeof _lastFocus.focus === 'function') _lastFocus.focus();  /* Return focus to the opener. */
 }
 
 document.querySelectorAll('.game-btn').forEach(b => b.addEventListener('click', () => openGame(b.dataset.game)));
 
-/* Close on X button */
+/* Close with the X button */
 document.querySelector('.gm-close').addEventListener('click', closeGame);
 
-/* Close when clicking the dark overlay area (modal itself, not the panel) */
+/* Close when the overlay is clicked outside the challenge panel */
 document.getElementById('game-modal').addEventListener('click', closeGame);
 document.querySelector('.gm-panel').addEventListener('click', e => e.stopPropagation());
 
-/* Play Again */
+/* Restart the challenge */
 document.querySelector('.gm-retry').addEventListener('click', () => {
   _qIdx = 0; _score = 0;
   document.querySelector('.gm-result').style.display = 'none';
@@ -487,7 +523,7 @@ document.querySelector('.gm-retry').addEventListener('click', () => {
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeGame(); });
 
-/* === CASE STUDY FILTER (interactive technical section) === */
+/* Filter case studies */
 (function () {
   const filters = document.querySelectorAll('.case-filter');
   const cards = document.querySelectorAll('.case-card');

@@ -11,7 +11,10 @@
   <meta name="author" content="Kabin Khadka" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0d131c" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="googlebot" content="index, follow" />
   <link rel="canonical" href="https://kabinkhadka.com.np/" />
+  <link rel="preload" href="style.css" as="style" />
 
   <!-- Social media preview -->
   <meta property="og:type" content="profile" />
@@ -20,6 +23,11 @@
   <meta property="og:url" content="https://kabinkhadka.com.np/" />
   <meta property="og:site_name" content="Kabin Khadka Portfolio" />
   <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://kabinkhadka.com.np/kabin-profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kabin Khadka — Cybersecurity Enthusiast & Ethical Hacking Learner" />
+  <meta name="twitter:description" content="Cybersecurity student and enthusiast from Nepal sharing hands-on notes, research, and security projects." />
+  <meta name="twitter:image" content="https://kabinkhadka.com.np/kabin-profile.jpg" />
 
   <!-- Browser icon -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d131c'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='20' font-weight='bold' fill='%2322c55e' text-anchor='middle'%3EKK%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
@@ -68,6 +76,19 @@
   <!-- Accessibility shortcut -->
   <a href="#main" class="skip-link">Skip to main content</a>
 
+  <a href="blog.html" class="floating-blog-btn" aria-label="Open blog page">
+    <span class="shadow" aria-hidden="true"></span>
+    <span class="edge" aria-hidden="true"></span>
+    <span class="front">
+      <span class="floating-blog-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M7 3h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 7h8M8 11h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="floating-blog-label">Blog</span>
+    </span>
+  </a>
 
   <!-- Main navigation -->
   <header>
@@ -164,7 +185,7 @@
       </div>
       <div class="about-grid">
         <div class="about-img-wrap">
-          <img src="kabin-profile.jpg" alt="Kabin Khadka - Cybersecurity Enthusiast from Nepal" class="about-img-placeholder" />
+          <img src="kabin-profile.jpg" alt="Kabin Khadka - Cybersecurity Enthusiast from Nepal" class="about-img-placeholder" loading="lazy" decoding="async" />
           <p class="about-img-badge">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             TryHackMe &amp; HackTheBox
@@ -573,6 +594,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

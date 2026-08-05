@@ -42,8 +42,8 @@
   --radius-sm: 8px;
   --nav-h: 64px;
   --tap: 44px;                 /* Minimum touch target size */
-  --font: 'Inter', system-ui, sans-serif;
-  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 }
 
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -204,30 +204,26 @@ ul { list-style: none; }
   height: 38px;
   border-radius: 50%;
   background: rgba(4, 33, 15, 0.24);
-  animation: blogIconPulse 1.4s ease-in-out infinite, blogIconOrbit 2.4s linear infinite;
+  transition: transform .2s ease;
   transform-origin: center;
 }
 .floating-blog-icon svg {
   width: 18px;
   height: 18px;
-  animation: blogIconSpin 2.4s linear infinite;
 }
-@keyframes blogFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-@keyframes blogIconPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
-@keyframes blogIconOrbit {
-  0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.18); }
-  50% { box-shadow: 0 0 0 6px rgba(255,255,255,0.08); }
-  100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.18); }
-}
-@keyframes blogIconSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(8deg); }
+@media (prefers-reduced-motion: reduce) {
+  .floating-blog-btn,
+  .floating-blog-btn .front,
+  .floating-blog-btn .shadow,
+  .floating-blog-btn:hover .front,
+  .floating-blog-btn:active .front,
+  .floating-blog-btn:hover .shadow,
+  .floating-blog-btn:active .shadow,
+  .floating-blog-icon {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
 }
 
 /* Use one clear focus style for keyboard users. */

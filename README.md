@@ -1,6 +1,7 @@
 # Kabin Khadka — Cybersecurity Portfolio
 
-My personal portfolio website. I'm a **cybersecurity student and enthusiast** from Kathmandu, Nepal, learning penetration testing, web application security, and digital forensics through hands-on labs and real-world case studies.
+I’m a cybersecurity researcher and technology enthusiast from Kathmandu, Nepal, with a strong curiosity about emerging malware, computer viruses, cyber threats, and the latest developments in cybersecurity. I explore new vulnerabilities, analyze real-world cyber incidents, and learn through hands-on labs, security research, and case studies.
+
 
 🔗 **Live site:** https://kabinkhadka.com.np/
 <img width="1160" height="692" alt="image" src="https://github.com/user-attachments/assets/08550538-b849-4c24-914b-b436ba7d21d6" />

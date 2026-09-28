@@ -6,6 +6,11 @@ I’m a cybersecurity researcher and technology enthusiast from Kathmandu, Nepal
 🔗 **Live site:** https://kabinkhadka.com.np/
 <img width="1160" height="692" alt="image" src="https://github.com/user-attachments/assets/08550538-b849-4c24-914b-b436ba7d21d6" />
 ---
+<img width="1917" height="935" alt="image" src="https://github.com/user-attachments/assets/67427da5-0530-456d-bd1b-6dcfe9cc0fdf" />
+<img width="1912" height="963" alt="image" src="https://github.com/user-attachments/assets/16f8429d-a27a-4bf0-97fb-e75dcd961ead" />
+<img width="1912" height="963" alt="image" src="https://github.com/user-attachments/assets/73bbb715-e5df-42d6-a19a-ae80f2b80c6e" />
+
+
 
 ## ✨ Features
 

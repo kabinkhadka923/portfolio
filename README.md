@@ -53,7 +53,7 @@ python3 -m http.server 8000
 
 - **GitHub:** [@kabinkhadka923](https://github.com/kabinkhadka923)
 - **LinkedIn:** [kabinkhadka](https://www.linkedin.com/in/kabinkhadka/)
-- **Credly:** [kabin-khadka](https://www.credly.com/users/kabin-khadka)
+- **Credly:** [kabin-khadka](https://www.credly.com/users/kabinkhadka)
 
 ## 📝 Note
 

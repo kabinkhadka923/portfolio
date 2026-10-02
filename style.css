@@ -267,10 +267,21 @@ section { padding: 64px 0; }
   height: 100%; display: flex; align-items: center; justify-content: space-between;
 }
 .nav-logo {
-  font-family: var(--mono); font-size: 1.2rem; font-weight: 600;
+  font-family: var(--mono);
+  font-size: 1.2rem;
+  font-weight: 600;
   letter-spacing: -1px;
-  display: inline-flex; align-items: center;
-  min-height: var(--tap); padding-right: 4px;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  padding-right: 4px;
+}
+
+.nav-logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
 }
 .nav-logo .dot { color: var(--accent); }
 
